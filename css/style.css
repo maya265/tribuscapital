@@ -4,19 +4,19 @@
    ===================================================== */
 
 :root {
-  --color-navy: #0f2743;
-  --color-navy-dark: #0a1b30;
-  --color-gold: #c9a24b;
-  --color-gold-light: #e4cd8f;
+  --color-navy: #323449;
+  --color-navy-dark: #131525;
+  --color-gold: #FFD505;
+  --color-gold-light: #ffe14d;
   --color-bg: #ffffff;
   --color-bg-alt: #f5f7fa;
   --color-text: #1f2a37;
   --color-text-muted: #5b6672;
   --color-border: #e3e8ee;
   --shadow-card: 0 6px 24px rgba(15, 39, 67, 0.08);
-  --radius: 12px;
-  --max-width: 1180px;
-  --font-main: "Assistant", "Segoe UI", Arial, sans-serif;
+  --radius: 0px;
+  --max-width: 1400px;
+  --font-main: "Heebo", "Segoe UI", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -113,9 +113,9 @@ a { color: inherit; text-decoration: none; }
 
 .btn {
   display: inline-block;
-  padding: 12px 26px;
-  border-radius: 999px;
-  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 0;
+  font-weight: 700;
   font-size: 0.95rem;
   cursor: pointer;
   border: none;
@@ -124,9 +124,9 @@ a { color: inherit; text-decoration: none; }
 
 .btn-primary {
   background: var(--color-gold);
-  color: var(--color-navy-dark);
+  color: var(--color-navy);
 }
-.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(201,162,75,0.4); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(255,213,5,0.45); }
 
 .btn-outline {
   background: transparent;
@@ -350,7 +350,7 @@ a { color: inherit; text-decoration: none; }
   flex: 1 1 140px;
   height: 70px;
   border: 1px dashed var(--color-border);
-  border-radius: 8px;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -385,7 +385,7 @@ input, select, textarea {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 0;
   font-family: inherit;
   font-size: 0.95rem;
   background: var(--color-bg-alt);
@@ -400,7 +400,7 @@ input:focus, select:focus, textarea:focus {
 /* ---------- FAQ accordion ---------- */
 .faq-item {
   border: 1px solid var(--color-border);
-  border-radius: 10px;
+  border-radius: 0;
   margin-bottom: 14px;
   overflow: hidden;
   background: #fff;
