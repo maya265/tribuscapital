@@ -46,18 +46,22 @@
       <div class="two-col">
         <div class="form-card">
           <h2 style="color:#0f2743;margin-top:0;">השאירו פרטים ונחזור אליכם</h2>
-          <form>
+          <form id="contact-form">
+            <input type="hidden" name="access_key" value="5616c72f-cc30-4969-a4b8-cec3efc6ae36">
+            <input type="hidden" name="subject" value="פנייה חדשה מאתר Tribus Capital">
+            <input type="hidden" name="from_name" value="Tribus Capital - אתר">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form-grid">
-              <div><label>שם מלא</label><input type="text" placeholder="[שם פרטי ומשפחה]"></div>
-              <div><label>טלפון</label><input type="tel" placeholder="[מספר טלפון]"></div>
-              <div class="full"><label>אימייל</label><input type="email" placeholder="[כתובת אימייל]"></div>
+              <div><label>שם מלא</label><input type="text" name="name" placeholder="[שם פרטי ומשפחה]" required></div>
+              <div><label>טלפון</label><input type="tel" name="phone" placeholder="[מספר טלפון]" required></div>
+              <div class="full"><label>אימייל</label><input type="email" name="email" placeholder="[כתובת אימייל]" required></div>
               <div class="full"><label>סוג מימון מבוקש</label>
-                <select><option>[בחרו: משכנתא]</option><option>[הלוואת גישור]</option><option>[איחוד הלוואות]</option><option>[מימון ליזמים]</option><option>[אחר]</option></select>
+                <select name="financing_type"><option>[בחרו: משכנתא]</option><option>[הלוואת גישור]</option><option>[איחוד הלוואות]</option><option>[מימון ליזמים]</option><option>[אחר]</option></select>
               </div>
-              <div class="full"><label>הודעה</label><textarea placeholder="[ספרו לנו בקצרה מה אתם מחפשים]"></textarea></div>
+              <div class="full"><label>הודעה</label><textarea name="message" placeholder="[ספרו לנו בקצרה מה אתם מחפשים]"></textarea></div>
             </div>
             <div style="margin-top:20px;"><button type="submit" class="btn btn-primary btn-block">שליחה</button></div>
-            <p class="placeholder" style="margin-top:14px;">חברו כאן טופס אמיתי (Formspree / שירות דומה / שרת) כדי שהפניות באמת יתקבלו במייל שלכם.</p>
+            <p id="form-status" role="status"></p>
           </form>
         </div>
         <div>

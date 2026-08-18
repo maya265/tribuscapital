@@ -396,6 +396,9 @@ input:focus, select:focus, textarea:focus {
   border-color: var(--color-gold);
   background: #fff;
 }
+.form-status { font-size: 0.9rem; margin-top: 14px; }
+.form-status.success { color: #1a7f4b; }
+.form-status.error { color: #c0392b; }
 
 /* ---------- FAQ accordion ---------- */
 .faq-item {
