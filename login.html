@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>תהליך המימון | שם החברה</title>
-  <meta name="description" content="כל שלבי תהליך המימון בשקיפות מלאה">
+  <title>כניסת לקוחות | שם החברה</title>
+  <meta name="description" content="כניסה לאזור האישי לצפייה בתיק ההלוואה שלכם">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -18,13 +18,13 @@
         <li><a href="index.html">בית</a></li>
         <li><a href="about.html">אודות</a></li>
         <li><a href="solutions.html">פתרונות מימון</a></li>
-        <li><a href="process.html" class="active">תהליך המימון</a></li>
+        <li><a href="process.html">תהליך המימון</a></li>
         <li><a href="partners.html">יועצים ושותפים</a></li>
         <li><a href="blog.html">בלוג</a></li>
         <li><a href="faq.html">שאלות נפוצות</a></li>
         <li><a href="reviews.html">המלצות לקוחות</a></li>
         <li><a href="contact.html">צור קשר</a></li>
-        <li><a href="login.html">אזור אישי</a></li>
+        <li><a href="login.html" class="active">אזור אישי</a></li>
         </ul>
       </nav>
       <div class="header-cta">
@@ -35,30 +35,33 @@
     </div>
   </header>
 
-
   <section class="page-hero">
     <div class="container">
-      <h1>תהליך המימון</h1>
-      <div class="crumbs"><a href="index.html">בית</a> / תהליך המימון</div>
+      <h1>כניסת לקוחות</h1>
+      <div class="crumbs"><a href="index.html">בית</a> / אזור אישי</div>
     </div>
   </section>
+
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <h2>מהפנייה הראשונית ועד קבלת הכסף</h2>
-        <p class="placeholder">כתבו פסקת פתיחה שמסבירה שהתהליך פשוט, שקוף ומלווה אתכם צעד-צעד.</p>
+      <div class="form-card" style="max-width:480px;margin:0 auto;">
+        <h2 style="color:#0f2743;margin-top:0;">כניסה לאזור האישי</h2>
+        <p style="color:var(--color-text-muted);font-size:0.92rem;margin-top:-6px;">צפו בפרטי ההלוואה והמסמכים שלכם</p>
+        <form id="login-form">
+          <div class="form-grid">
+            <div class="full"><label for="login-email">אימייל</label><input type="email" id="login-email" name="email" required></div>
+            <div class="full"><label for="login-password">סיסמה</label><input type="password" id="login-password" name="password" required></div>
+          </div>
+          <div style="margin-top:20px;"><button type="submit" class="btn btn-primary btn-block">כניסה</button></div>
+          <p id="form-status" role="status"></p>
+          <p style="text-align:center;margin-top:10px;">
+            <a href="#" id="forgot-password-link" style="font-size:0.88rem;color:var(--color-text-muted);text-decoration:underline;">שכחתי סיסמה</a>
+          </p>
+        </form>
+        <p class="legal-box" style="font-size:0.85rem;margin-top:22px;margin-bottom:0;">
+          🔒 המסמכים שלך חסויים ומיועדים לך בלבד. הגישה לאזור האישי ניתנת ללקוחות קיימים בלבד — החשבון נוצר עבורכם על ידי הצוות שלנו.
+        </p>
       </div>
-      <div class="steps">
-        <div class="step"><h4>[פנייה ומילוי פרטים]</h4><p class="placeholder">מה הלקוח ממלא, וכמה זמן זה לוקח (למשל 5 דקות).</p></div>
-        <div class="step"><h4>[בדיקת זכאות ראשונית]</h4><p class="placeholder">אילו מסמכים נבדקים בשלב הזה ותוך כמה זמן חוזרים ללקוח.</p></div>
-        <div class="step"><h4>[הצעת מימון]</h4><p class="placeholder">מה כולל מסמך ההצעה — ריבית, תנאים, לוח סילוקין.</p></div>
-        <div class="step"><h4>[בדיקות משפטיות/שמאות]</h4><p class="placeholder">אילו גורמים נכנסים לתמונה (עו"ד, שמאי) ומי נושא בעלויות.</p></div>
-        <div class="step"><h4>[חתימה על הסכם]</h4><p class="placeholder">היכן מתבצעת החתימה (פרונטלית/דיגיטלית).</p></div>
-        <div class="step"><h4>[העברת הכספים]</h4><p class="placeholder">לוח זמנים טיפוסי מרגע החתימה ועד קבלת הכסף בפועל.</p></div>
-        <div class="step"><h4>[ליווי לאורך ההלוואה]</h4><p class="placeholder">איזה שירות שוטף מקבל הלקוח (איש קשר קבוע, דוחות וכו').</p></div>
-        <div class="step"><h4>[סיום/פירעון]</h4><p class="placeholder">איך מתבצע פירעון מוקדם או סיום ההלוואה בתום התקופה.</p></div>
-      </div>
-      <div style="text-align:center;margin-top:36px;"><a href="contact.html" class="btn btn-primary">התחילו את התהליך</a></div>
     </div>
   </section>
 
@@ -102,7 +105,8 @@
     </div>
   </footer>
   <a href="https://wa.me/9725XXXXXXXX" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
-  <script src="js/main.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/portal.js"></script>
 </body>
 </html>
