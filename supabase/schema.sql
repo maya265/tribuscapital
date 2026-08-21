@@ -74,6 +74,19 @@ create policy "loan_documents_select_own" on public.loan_documents
 -- can create/edit clients, loans, and documents. This matches the "admin
 -- provisions everything" workflow in supabase/ADMIN-GUIDE.md.
 
+-- ---------- API access grants ----------
+-- Required because the project was created with "Automatically expose new
+-- tables" turned off (the safer setting Supabase itself recommends) — so
+-- these tables need to be exposed to the Data API explicitly. Only the
+-- "authenticated" role gets access (logged-in clients); "anon" gets none,
+-- so an unauthenticated request has no table-level access at all, on top
+-- of the RLS policies above.
+
+grant usage on schema public to authenticated;
+grant select on public.profiles to authenticated;
+grant select on public.loans to authenticated;
+grant select on public.loan_documents to authenticated;
+
 -- ---------- Storage ----------
 -- Run this AFTER creating a bucket named 'loan-documents' (set to Private)
 -- in Storage → New bucket.
