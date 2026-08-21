@@ -1,4 +1,6 @@
 // Client portal: login (login.html) + authenticated dashboard (portal.html).
+// Note: links/redirects use clean URLs (no .html) — GitHub Pages resolves
+// "/login" to login.html automatically.
 document.addEventListener("DOMContentLoaded", function () {
 
   // ---------- Login page ----------
@@ -6,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var loginStatus = document.getElementById("form-status");
   if (loginForm && loginStatus) {
     supabaseClient.auth.getSession().then(function (res) {
-      if (res.data.session) window.location.href = "portal.html";
+      if (res.data.session) window.location.href = "portal";
     });
 
     loginForm.addEventListener("submit", function (e) {
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             submitBtn.textContent = "כניסה";
             return;
           }
-          window.location.href = "portal.html";
+          window.location.href = "portal";
         })
         .catch(function () {
           loginStatus.textContent = "אירעה שגיאה. נסו שוב מאוחר יותר.";
@@ -50,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
         supabaseClient.auth.resetPasswordForEmail(email, {
-          redirectTo: window.location.origin + window.location.pathname.replace("login.html", "login.html")
+          redirectTo: window.location.origin + "/login"
         }).then(function () {
           loginStatus.textContent = "אם הכתובת קיימת במערכת, נשלח אליה קישור לאיפוס סיסמה.";
           loginStatus.className = "form-status success";
@@ -65,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (loansList && portalStatus) {
     supabaseClient.auth.getSession().then(function (res) {
       if (!res.data.session) {
-        window.location.href = "login.html";
+        window.location.href = "login";
         return;
       }
       loadLoans();
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (logoutBtn) {
       logoutBtn.addEventListener("click", function () {
         supabaseClient.auth.signOut().then(function () {
-          window.location.href = "index.html";
+          window.location.href = "/";
         });
       });
     }
