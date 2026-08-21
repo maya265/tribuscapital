@@ -135,6 +135,13 @@ a { color: inherit; text-decoration: none; }
 }
 .btn-outline:hover { background: rgba(255,255,255,0.1); }
 
+.btn-outline-dark {
+  background: transparent;
+  border: 1.5px solid var(--color-navy);
+  color: var(--color-navy);
+}
+.btn-outline-dark:hover { background: rgba(15,39,67,0.06); }
+
 .btn-block { width: 100%; text-align: center; }
 
 .nav-toggle {

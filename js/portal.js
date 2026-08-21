@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
           docsHtml = '<div class="doc-list">' + docs.map(function (doc) {
             return '<div class="doc-item">' +
               '<span>' + escapeHtml(doc.title) + "</span>" +
-              '<button type="button" class="btn btn-outline btn-sm download-btn" data-path="' + escapeHtml(doc.storage_path) + '">הורדה</button>' +
+              '<button type="button" class="btn btn-outline-dark btn-sm download-btn" data-path="' + escapeHtml(doc.storage_path) + '">הורדה</button>' +
               "</div>";
           }).join("") + "</div>";
         }
